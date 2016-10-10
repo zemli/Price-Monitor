@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+ <cron>
+   <url>/admin/FetchAll</url>
+   <description>Fetch all data per day</description>
+   <schedule>every day 10:30</schedule>
+   <timezone>America/Toronto</timezone>
+ </cron>
+</cronentries>
+

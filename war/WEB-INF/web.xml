@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  
+    <!-- user operations related -->
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>ece1779.appengine.servlet.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/user/Login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>ece1779.appengine.servlet.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/user/Logout</url-pattern>
+	</servlet-mapping>
+	<servlet>   
+		<servlet-name>UserFeedback</servlet-name>
+		<servlet-class>ece1779.appengine.servlet.UserFeedback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserFeedback</servlet-name>
+		<url-pattern>/user/Feedback</url-pattern>
+	</servlet-mapping>
+	
+	<!-- user subscriptions related  -->
+	<servlet>   
+		<servlet-name>AddSub</servlet-name>
+		<servlet-class>ece1779.appengine.servlet.AddSub</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddSub</servlet-name>
+		<url-pattern>/sub/AddSub</url-pattern>
+	</servlet-mapping>
+	<servlet>   
+		<servlet-name>UpdateSub</servlet-name>
+		<servlet-class>ece1779.appengine.servlet.UpdateSub</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateSub</servlet-name>
+		<url-pattern>/sub/UpdateSub</url-pattern>
+	</servlet-mapping>
+	<servlet>   
+		<servlet-name>RemoveSub</servlet-name>
+		<servlet-class>ece1779.appengine.servlet.RemoveSub</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RemoveSub</servlet-name>
+		<url-pattern>/sub/RemoveSub</url-pattern>
+	</servlet-mapping>	
+	
+	<!-- admin related -->
+	<servlet>   
+		<servlet-name>FetchAll</servlet-name>
+		<servlet-class>ece1779.appengine.servlet.FetchAll</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FetchAll</servlet-name>
+		<url-pattern>/admin/FetchAll</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+    	<web-resource-collection>
+      		<web-resource-name>user</web-resource-name>
+      		<url-pattern>/user/*</url-pattern>
+    	</web-resource-collection>
+    	<auth-constraint>
+      		<role-name>*</role-name>
+    	</auth-constraint>
+  	</security-constraint>
+
+	<security-constraint>
+    	<web-resource-collection>
+      		<web-resource-name>sub</web-resource-name>
+      		<url-pattern>/sub/*</url-pattern>
+    	</web-resource-collection>
+    	<auth-constraint>
+      		<role-name>*</role-name>
+    	</auth-constraint>
+  	</security-constraint>
+	
+	<security-constraint>
+    	<web-resource-collection>
+      		<web-resource-name>onlyadmin</web-resource-name>
+      		<url-pattern>/admin/*</url-pattern>
+    	</web-resource-collection>
+    	<auth-constraint>
+      		<role-name>admin</role-name>
+    	</auth-constraint>
+  	</security-constraint>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

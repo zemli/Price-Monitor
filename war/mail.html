@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<meta charset="utf-8"> 
+  		<title>Provide Your Feedback</title>
+  		<link rel="stylesheet" type="text/css" href="/css/style.css">
+ 	</head>
+ 	<body>
+ 		<div class="container">
+			<div class="content">
+				<img src="/images/banner.jpg" />
+				<hr />
+				<div class="navigation">
+					<a href="/index.html">Home</a> | 
+					<a href="/mail.html">Contact Us</a> | 
+					<a href="/user/Login">Log In</a>
+				</div>
+				<hr /><br />
+
+ 				<form action="/user/Feedback" method="post">
+ 					<table width="70%" align="center">
+			 			<tr> 
+			 				<td><th align="right"> <label for="name">Name </label>  </th></td>
+			 				<td><th align="left"> <input type="text" name="name"/> </th></td> </tr>
+						<tr>
+						<tr> 
+			 				<td><th align="right"> <label for="email">Email </label>  </th></td>
+			 				<td><th align="left"> <input type="email" name="email"/> </th></td> </tr>
+						<tr>
+						<tr>
+							<td><th align="right"> <label for="description">Description </label>  
+							<td><th align="left"> <textarea  name="description" cols="100" rows="10">Type your feedback here</textarea>  </th></td>
+						</tr>
+						<tr>
+							<td colspan="4" align='center'> <input type="submit" name="submit" value="Send Request" align="center" /></td>
+						</tr>		
+ 					</table>
+ 				</form>
+ 			</div>
+ 		</div>
+ 	</body>
+</html>
