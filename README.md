@@ -50,22 +50,22 @@ c.	Subscription - One instance of the Subscription class represents one online p
 d.	UserSub - One instance of the UserSub class represents one subscription entry from a user. It contains information about the user, the subscription product (through Key mapping), and the user’s notification settings. The content of this class is stored through JDO.
 e.	UserPref - One instance of the UserPref class represents one user of our application. It contains information about the user and a list of the UserSub instances that belongs to this user. The content of this class is stored through JDO. 
 </li><li>package ece1779.appengine.helper 
-a.	InfoFetcher - The helper class for fetching information when given an url for an online product. 
-b.	WebCatch - The helper class which is based on JSoup API and is performing the actual parsing of the html content to get the current price and profile photo for the given online product. Different website and information type is identified by the series number in this helper class.
-c.	SendMail - The helper class for sending mails. The function of sending emails to a specific address is realized by this class.
+<br>a.	InfoFetcher - The helper class for fetching information when given an url for an online product. 
+<br>b.	WebCatch - The helper class which is based on JSoup API and is performing the actual parsing of the html content to get the current price and profile photo for the given online product. Different website and information type is identified by the series number in this helper class.
+<br>c.	SendMail - The helper class for sending mails. The function of sending emails to a specific address is realized by this class.
 </li><li>package ece1779.appengine.servlet
-a.	UserFeedback - This class sends feedbacks which created by users in mail.html to admin
-b.	UpdateSub - updates link, name, whether to send alert email and ratio. Users use this function to change their settings of items listed in Homepage.jsp.
-c.	RemoveSub - deletes chosen items in the subscription list.
-d.	Logout - realizes logout google account function.
-e.	Login - judges whether the user has existing account and login 
-f.	FetchAll - The servlet class used by the cron job to perform the daily task (fetching latest price for all subscribed online product.)
-g.	AddSub - allows users add new items to subscription list and does a duplication check 
+<br>a.	UserFeedback - This class sends feedbacks which created by users in mail.html to admin
+<br>b.	UpdateSub - updates link, name, whether to send alert email and ratio. Users use this function to change their settings of items listed in Homepage.jsp.
+<br>c.	RemoveSub - deletes chosen items in the subscription list.
+<br>d.	Logout - realizes logout google account function.
+<br>e.	Login - judges whether the user has existing account and login 
+<br>f.	FetchAll - The servlet class used by the cron job to perform the daily task (fetching latest price for all subscribed online product.)
+<br>g.	AddSub - allows users add new items to subscription list and does a duplication check 
 </li><li>HTML and JSP
-a.	index.html - the Welcome homepage for the web application	
-b.	mail.html - the web page to gather information about users’ feedback and send mails to admin.
-c.	user/Homepage.jsp - the homepage for user after successful login. Most of the functionality of the web application is provided in this page. 
-d.	user/ShowDetail.jsp - the jsp page to plot the price history for specific product using Google Chart.
+<br>a.	index.html - the Welcome homepage for the web application	
+<br>b.	mail.html - the web page to gather information about users’ feedback and send mails to admin.
+<br>c.	user/Homepage.jsp - the homepage for user after successful login. Most of the functionality of the web application is provided in this page. 
+<br>d.	user/ShowDetail.jsp - the jsp page to plot the price history for specific product using Google Chart.
 </li></ol>
 
 
