@@ -44,11 +44,11 @@ Google Chart; it’s used to plot the chart for price history
 <h2>Description of the architecture</h2>
 <ol>
 <li>package ece1779.appengine.basic
-a.	CMF - The Cache Manager Factory, which is the class for accessing Memcahce;
-b.	PMF - The Persistence Manager Factory, which is the class for using JDO to store persistence object.
-c.	Subscription - One instance of the Subscription class represents one online product that is being monitored by our web application. It’s contains information about the product, such as the url, the date when this product is first added, the current price and etc. It also maintains a list of the UserSub instances that are related to it. The content of the instances of the subscription class is stored to datastore through JDO. 
-d.	UserSub - One instance of the UserSub class represents one subscription entry from a user. It contains information about the user, the subscription product (through Key mapping), and the user’s notification settings. The content of this class is stored through JDO.
-e.	UserPref - One instance of the UserPref class represents one user of our application. It contains information about the user and a list of the UserSub instances that belongs to this user. The content of this class is stored through JDO. 
+<br>a.	CMF - The Cache Manager Factory, which is the class for accessing Memcahce;
+<br>b.	PMF - The Persistence Manager Factory, which is the class for using JDO to store persistence object.
+<br>c.	Subscription - One instance of the Subscription class represents one online product that is being monitored by our web application. It’s contains information about the product, such as the url, the date when this product is first added, the current price and etc. It also maintains a list of the UserSub instances that are related to it. The content of the instances of the subscription class is stored to datastore through JDO. 
+<br>d.	UserSub - One instance of the UserSub class represents one subscription entry from a user. It contains information about the user, the subscription product (through Key mapping), and the user’s notification settings. The content of this class is stored through JDO.
+<br>e.	UserPref - One instance of the UserPref class represents one user of our application. It contains information about the user and a list of the UserSub instances that belongs to this user. The content of this class is stored through JDO. 
 </li><li>package ece1779.appengine.helper 
 <br>a.	InfoFetcher - The helper class for fetching information when given an url for an online product. 
 <br>b.	WebCatch - The helper class which is based on JSoup API and is performing the actual parsing of the html content to get the current price and profile photo for the given online product. Different website and information type is identified by the series number in this helper class.
