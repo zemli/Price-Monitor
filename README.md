@@ -30,16 +30,16 @@ Here is a step-by-step instruction about how to use our web application.
 </li>
 <h2>Appengine Service used by the application</h2>
 Our web application uses multiple service provided by Google, includes:
-<li>
-1.	Google Accounts Service; it’s used for user login
+<ol><li>
+Google Accounts Service; it’s used for user login
 </li><li>
-2.	Datastore and Memcache; it’s used for storing data
-3.	Cron Jobs; it’s used for running the scheduled task to fetch new price data every day
+Datastore and Memcache; it’s used for storing data
+Cron Jobs; it’s used for running the scheduled task to fetch new price data every day
 </li><li>
-4.	Mail API; it’s used for sending email
+Mail API; it’s used for sending email
 </li><li>
-5.	Google Chart; it’s used to plot the chart for price history
-</li><li>
+Google Chart; it’s used to plot the chart for price history
+</li></ol>
 
 <h2>Description of the architecture</h2>
 <ol>
